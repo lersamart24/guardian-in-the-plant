@@ -71,4 +71,4 @@ while True:
         print("i guess this is the good ending but IT WILL JUST END HERE SO NEXT TIME CLICK YES")
     
     else:
-        print("I didn't understand, please type yes or no")
+        print("I didn't understand, please type yes or no.")
