@@ -9,15 +9,16 @@ def sun_flower():
     print(" ")
     print("The outbreak as mutate the plant and human the plant now is 10x stronger and the human infect by the zoonotic bridge rafflesia(ZBR)")
     while True:
-        first_step = input("What will you do (save the world/just give up): ").lower()
+        first_step = input("what will you do(save the world/do nothing): ").lower()
 
-        if first_step == "just give up":
+        if first_step == "do nothing":
             print("you got the bad ending every one die")
+            break
 
  
 
         elif first_step == "save the world":
-            print("you going to start the new adventure of your own")
+            print("You explore trying to find somthing that will help you with your adventure")
             shovel()
             break
 
@@ -27,75 +28,52 @@ def sun_flower():
 #NEW STUFF LATER IN FIXING MODE
 def shovel():
     while True:
-        choice = input(" (pick it/leave it there): ").lower()
+        choice = input("while your trying to find somthing you found a Ruellia tuberosa(pick/leave)").lower()
+            
 
-        if choice == "pick it":
-            backpack.append("apple seed")
-            print("you pick it and it's an apple seed, you keep going")
+        if choice == "pick":
+            print("you pick it and it's an Ruellia tuberosa, you store it in your backpack and  keep going")
+            backpack.append("Ruellia tuberosa")
             break
 
-        elif choice == "leave it there":
-            print("you miss on a very cool looking plant try")
+        
+        elif choice == "leave":
+            print("you miss on a very cool looking thing try")
             break
 
         else:
             print("you miss spell")
 
 
-def it_start():
-    print("The apple tree starts growing...")
-    
+def start():
+    print("beside that you found a sheet of paper")
+    time.sleep(0.6)
+    print(" ")
+    print("it say (Since the breakout i have been search and found out) ")
+    time.sleep(0.6)
+    print(" ")
+    print("What the only cure to the ZBR is the golden apple but the rafflesia going to kill it in 2 day")
+    time.sleep(0.6)
+    print(" ")
+    print("the only rafflesia weakness is fire ")
+    print(" ")
+    time.sleep(0.6)
+
 
 sun_flower()
 
-print("You open your backpack to plant the apple seed")
-print(backpack)
-
+print("you pass by a biohazrd")
 while True:
-    plant = input("Do you want to plant the apple seed (yes/no): ").lower()
+    plant = input("Do you want to go and check what in it (yes/no): ").lower()
     
     if plant == "yes":
-        if "apple seed" in backpack:
-                backpack.remove("apple seed")
-                print("You plant the seed and go to sleep")
-                it_start()
+                print("You go in to check and found a apple tree with a rafflesia in wrap around the trunk")
+                start()
                 break
-        else:
-            print("you don't have the seed LIER now this time pick it up")
+        
     
     elif plant == "no":
-        print("i guess this is the good ending but IT WILL JUST END HERE SO NEXT TIME CLICK YES")
-    
+        print("You didn't go in and you step on a sundew plant it eat you try again ")
+        
     else:
         print("I didn't understand, please type yes or no.")
-
-
-
-def start():
-    print("you smell somthing like rotten meat from your apple tree")
-    time.sleep(0.6)
-    print(" ")
-    print("a rafflesia has grow on your plant it know as the parasite flower ")
-    time.sleep(0.6)
-    print(" ")
-    print("you go out to side cure for your plant")
-    time.sleep(0.6)
-    print(" ")
-    print("it start to rain and there was a poping sound then somthing got into your eye")
-    time.sleep(0.6)
-    print(" ")
-    print("the seed that got in your eye is a Ruellia tuberosa it a seed that well wet will pop")
-    time.sleep(0.6)
-    print(" ")
-    print("it pop seed won't do any harm but if it hit your eye it can make you vision bur")
-    time.sleep(0.6)
-    print(" ")
-    print("you take the seed and put it in a jar and keep walking")
-    backpack.append("Ruellia tuberosa")
-    # while True
-    #     water == input("you found a shadow pass by so you go closer(attack/peace)")
-    #     if water == "attack":
-    #         if "Ruellia tuberosa" in backpack:
-    #             print("you add water to the jar and throw at the shadow ")
-    #             backpack.pop("Ruellia tuberosa")
-    #             print("you blind shadow and go behide the shadow and you ")
