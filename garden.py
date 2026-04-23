@@ -8,7 +8,6 @@ def intro():
     time.sleep(0.6)
     print("the outbreak has mutate the plant and human the plant now is 10x stronger")
     print("humans are infected by the zoonotic bridge rafflesia (ZBR)")
-
     alive = True
 
     while True:
@@ -80,7 +79,7 @@ def start():
 
 def fight_scene():
     while True:
-        pepsii = input("what should you do 1(fight it) 2(run): ")
+        pepsii = input("what should you do 1(fight it) 2(run): ").lower()
 
         if pepsii == "1":
             print("you try to fight it but you are too weak and die")
@@ -88,13 +87,60 @@ def fight_scene():
 
         elif pepsii == "2":
             print("you run away but find no survivors")
+            weapon()
+            break
+        
+        else:
+            print("Pick 1 or 2 try again")
+
+
+
+def weapon():
+    print("you did find any surviors so you decide to craft some weapon")
+    time.sleep(0.6)   
+    print( )
+    print("you go out to find some ingredient")
+    time.sleep(0.6)   
+    print( )
+    print("you know the rafflesia is weak to fire so you need ingredirnt to make waepon")
+    time.sleep(0.6)   
+    print( )
+    while True:
+        coming = input("Before you can do anything a group of infected come near you(fight/run/hide): ").lower()
+
+        if coming == "fight":
+            print("You try to fight it but you got no weapon and die")
+
+        elif coming == "hide":
+            print("You try to hide behind a tree and it work the infected leave and you come out")
+            ingredirnt()
             break
 
+        elif coming == "run":
+            print("you maybe can outrun a 100 of zombie but not a 1000 you die")
+        
         else:
-            print("i didn't understand try again")
+            print("pick between fight/run/hide")
 
 
-# ---- GAME START ----
+
+
+def ingredirnt():
+    print("After you run away from the infected you found a pine tree sap")
+    time.sleep(0.6)   
+    print( )    
+    print("you pick the sap for the ingredirnt and store it in a jar")
+    time.sleep(0.6)   
+    print( )    
+    backpack.append("sap in a jar")
+    print(backpack)
+
+
+
+
+
+
+
 
 alive = intro()
 
