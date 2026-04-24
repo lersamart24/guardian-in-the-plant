@@ -142,7 +142,13 @@ def ingredirnt():
     print("So you got to search for a lighter")
     time.sleep(0.6)   
     print(" ")
-    print("you didn't find anything but a ")
+    print("You didn't find anything but a abandoned camp")
+    survivors = input("should you investigate the camp(yes/no)").lower()
+    if survivors == "yes":
+        print("You investigate the camp and found a backpack inside that it a lighter")
+
+    elif survivors == "no":
+        print("you didn't investigate the camp so you go out in forest and a infe")
 
 
 
@@ -153,4 +159,6 @@ if alive:
     shovel()
     biohazard_scene()
     fight_scene()
+
+
 
