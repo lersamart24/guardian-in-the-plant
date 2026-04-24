@@ -49,19 +49,18 @@ def shovel():
 def biohazard_scene():
     print("you pass by a biohazard")
 
-    while True:
-        plant = input("do you want to go in (yes/no): ").lower()
+    plant = input("do you want to go in (yes/no): ").lower()
 
-        if plant == "yes":
-            print("you found an apple tree with a rafflesia around it")
-            start()
-            break
+    if plant == "yes":
+        print("you found an apple tree with a rafflesia around it")
+        start()
+            
 
-        elif plant == "no":
-            print("you step on a sundew plant it eat you try again")
+    elif plant == "no":
+        print("you step on a sundew plant it eat you try again")
 
-        else:
-            print("i didn't understand")
+    else:
+        print("i didn't understand")
 
 
 def start():
@@ -78,20 +77,19 @@ def start():
 
 
 def fight_scene():
-    while True:
-        pepsii = input("what should you do 1(fight it) 2(run): ").lower()
+    pepsii = input("what should you do 1(fight it) 2(run): ").lower()
 
-        if pepsii == "1":
-            print("you try to fight it but you are too weak and die")
+    if pepsii == "1":
+        print("you try to fight it but you are too weak and die")
             
 
-        elif pepsii == "2":
-            print("you run away but find no survivors")
-            weapon()
-            break
+    elif pepsii == "2":
+        print("you run away but find no survivors")
+        weapon()
+            
         
-        else:
-            print("Pick 1 or 2 try again")
+    else:
+        print("Pick 1 or 2 try again")
 
 
 
@@ -105,22 +103,21 @@ def weapon():
     print("you know the rafflesia is weak to fire so you need ingredirnt to make waepon")
     time.sleep(0.6)   
     print( )
-    while True:
-        coming = input("Before you can do anything a group of infected come near you(fight/run/hide): ").lower()
+    coming = input("Before you can do anything a group of infected come near you(fight/run/hide): ").lower()
 
-        if coming == "fight":
-            print("You try to fight it but you got no weapon and die")
+    if coming == "fight":
+        print("You try to fight it but you got no weapon and die")
 
-        elif coming == "hide":
-            print("You try to hide behind a tree and it work the infected leave and you come out")
-            ingredirnt()
-            break
-
-        elif coming == "run":
-            print("you maybe can outrun a 100 of zombie but not a 1000 you die")
+    elif coming == "hide":
+        print("You try to hide behind a tree and it work the infected leave and you come out")
+        ingredirnt()
         
-        else:
-            print("pick between fight/run/hide")
+
+    elif coming == "run":
+        print("you maybe can outrun a 100 of zombie but not a 1000 you die")
+        
+    else:
+        print("pick between fight/run/hide")
 
 
 
@@ -128,16 +125,24 @@ def weapon():
 def ingredirnt():
     print("After you run away from the infected you found a pine tree sap")
     time.sleep(0.6)   
-    print( )    
+    print(" ")    
     print("you pick the sap for the ingredirnt and store it in a jar")
     time.sleep(0.6)   
-    print( )    
+    print(" ")    
     backpack.append("sap in a jar")
     print(backpack)
-
-
-
-
+    time.sleep(0.6)   
+    print(" ")
+    print("the ingredirnt for a fire weapon is")
+    time.sleep(0.6)   
+    print(" ")
+    print("(pine tree sap/lighter/stick)")
+    time.sleep(0.6)   
+    print(" ")
+    print("So you got to search for a lighter")
+    time.sleep(0.6)   
+    print(" ")
+    print("you didn't find anything but a ")
 
 
 
@@ -148,3 +153,4 @@ if alive:
     shovel()
     biohazard_scene()
     fight_scene()
+
