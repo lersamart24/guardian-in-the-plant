@@ -30,8 +30,7 @@ def intro():
 
 
 def shovel():
-    while True:
-        choice = input("you found a Ruellia tuberosa (pick/leave): ").lower()
+    choice = input("you found a Ruellia tuberosa (pick/leave): ").lower()
 
         if choice == "pick":
             print("you pick it and store it in your backpack")
@@ -146,12 +145,28 @@ def ingredirnt():
     survivors = input("should you investigate the camp(yes/no)").lower()
     if survivors == "yes":
         print("You investigate the camp and found a backpack inside that it a lighter")
-
+        group():
+    
     elif survivors == "no":
-        print("you didn't investigate the camp so you go out in forest and a infe")
+        print("you didn't investigate the camp so you go out in forest and a infected")
 
+    else:
+        print("you miss spell")
 
+def group():
+    craft = input("You got the lighter that is your last ingredirnt do you want to craft it (yes/no)")
 
+    if craft == "yes":
+        #part for checking if the backpack have the ingredirnt 
+        print("you caft the flamethrower")
+
+    elif craft == "no":
+        print("what are you saving that in ingredirnt for 🧐")
+
+    else:
+        print("you miss spell")
+
+    
 
 alive = intro()
 
