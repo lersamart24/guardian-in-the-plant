@@ -47,17 +47,19 @@ def shovel():
 
 def biohazard_scene():
     print("you pass by a biohazard")
-
-    plant = input("do you want to go in (yes/no): ").lower()
     while True:
+        plant = input("do you want to go in (yes/no): ").lower()
+
         if plant == "yes":
             print("you go in and found an apple tree with a rafflesia around it you walk around a bit")
             start()
-                
+            break    
     
         elif plant == "no":
             print("you step on a sundew plant it eat you try again")
-    
+            break
+
+        
         else:
             print("i didn't understand")
 
@@ -76,8 +78,9 @@ def start():
 
 
 def fight_scene():
-        pepsii = input("what should you do 1(fight it) 2(run): ").lower()
-        while True:
+    while True:
+            pepsii = input("what should you do 1(fight it) 2(run): ").lower()
+        
             if pepsii == "1":
                 print("you try to fight it but you are too weak and die")
                 break
@@ -103,8 +106,9 @@ def weapon():
     print("you know the rafflesia is weak to fire so you need ingredirnt to make waepon")
     time.sleep(0.6)   
     print( )
-    coming = input("Before you can do anything a group of infected come near you(fight/run/hide): ").lower()
     while True:
+        coming = input("Before you can do anything a group of infected come near you(fight/run/hide): ").lower()
+    
         if coming == "fight":
             print("You try to fight it but you got no weapon and die")
             break
@@ -146,8 +150,9 @@ def ingredirnt():
     time.sleep(0.6)   
     print(" ")
     print("You didn't find anything but a abandoned camp")
-    survivors = input("should you investigate the camp(yes/no)").lower()
     while True:
+        survivors = input("should you investigate the camp(yes/no)").lower()
+    
         if survivors == "yes":
             print("You investigate the camp and found a backpack inside that it a lighter")
             group()
@@ -164,9 +169,9 @@ def group():
     print("All you need left is a stick so you pick some random stick on the ground")
     backpack.append("stick")
     print(backpack)
-    craft = input("You got a stick that is your last ingredirnt do you want to craft it (yes/no)")
     while True:
-        
+        craft = input("You got a stick that is your last ingredirnt do you want to craft it (yes/no)")
+    
         if craft == "yes":
             #part for checking if the backpack have the ingredirnt 
             print("you caft the flamethrower")
