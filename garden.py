@@ -54,7 +54,7 @@ def biohazard_scene():
             print("you go in and found an apple tree with a rafflesia around it you walk around a bit")
             start()
             break    
-    
+        #there a bug on this one
         elif plant == "no":
             print("you step on a sundew plant it eat you try again")
             break
