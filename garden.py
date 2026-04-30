@@ -32,17 +32,17 @@ def intro():
 def shovel():
     choice = input("you found a Ruellia tuberosa (pick/leave): ").lower()
 
-        if choice == "pick":
-            print("you pick it and store it in your backpack")
-            backpack.append("Ruellia tuberosa")
-            break
+    if choice == "pick":
+        print("you pick it and store it in your backpack")
+        backpack.append("Ruellia tuberosa")
+            
 
-        elif choice == "leave":
-            print("you miss on a very cool thing")
-            break
+    elif choice == "leave":
+        print("you miss on a very cool thing")
+            
 
-        else:
-            print("you miss spell")
+    else:
+        print("you miss spell")
 
 
 def biohazard_scene():
@@ -145,28 +145,46 @@ def ingredirnt():
     survivors = input("should you investigate the camp(yes/no)").lower()
     if survivors == "yes":
         print("You investigate the camp and found a backpack inside that it a lighter")
-        group():
-    
+        group()
+        break
+            
     elif survivors == "no":
-        print("you didn't investigate the camp so you go out in forest and a infected")
-
+        print("you didn't investigate the camp so you go out in forest and a infected kill you")
+        group()
+        break
+    
     else:
         print("you miss spell")
-
+    
 def group():
-    craft = input("You got the lighter that is your last ingredirnt do you want to craft it (yes/no)")
-
-    if craft == "yes":
-        #part for checking if the backpack have the ingredirnt 
-        print("you caft the flamethrower")
-
-    elif craft == "no":
-        print("what are you saving that in ingredirnt for 🧐")
-
-    else:
-        print("you miss spell")
+    print("All you need left is a stick so you pick some random stick on the ground")
+    backpack.append("stick")
+    print(backpack)
+    craft = input("You got a stick that is your last ingredirnt do you want to craft it (yes/no)")
+    while True:
+        
+        if craft == "yes":
+            #part for checking if the backpack have the ingredirnt 
+            print("you caft the flamethrower")
+            weapon_test()
+            break
 
     
+        elif craft == "no":
+            print("what are you saving that in ingredirnt for 🧐")
+            weapon_test()
+            break
+    
+        else:
+            print("you miss spell")
+
+    
+
+def weapon_test():
+    print("hehe")
+
+
+
 
 alive = intro()
 
@@ -174,6 +192,3 @@ if alive:
     shovel()
     biohazard_scene()
     fight_scene()
-
-
-
