@@ -175,6 +175,7 @@ def group():
         if craft == "yes":
             #part for checking if the backpack have the ingredirnt 
             print("you caft the flamethrower")
+            backpack.append("flamethrower")
             weapon_test()
             break
 
@@ -190,11 +191,155 @@ def group():
     
 
 def weapon_test():
-    print("hehe")
+    print("you got the flamethrower but you want to test if it work")
+    time.sleep(0.6)
+    print(" ")
+    print("so you find a group of infected and try to use it")
+    time.sleep(0.6)
+    print(" ")
+    while True:
+        test = input("do you want to test it (yes/no)").lower()
+    
+        if test == "yes":
+            if "flamethrower" in backpack:
+                print("you test it and it work you burn the infected and you are ready to fight the rafflesia")
+                first_round()
+                break
+            else:
+                print("you don't have the flamethrower so you can't test it and the infected kill you")
+                break
+            
+        elif test == "no":
+            print("you don't test it and go to fight the rafflesia so you don't now how to use it")
+            break
+     
+        else:
+            print("you miss spell")
+
+def first_round():
+    print("you go to the biohazard again to fight the rafflesia")
+    time.sleep(0.6)
+    print(" ")
+    print("it grow bigger and stronger and the golden apple is almost destroyed the time right now is 11:00 AM")
+    time.sleep(0.6)
+    print(" ")
+    while True:
+        fight = input("do you want to fight it now (yes/no)").lower()
+    
+        if fight == "yes":
+            print("you try to fight it but you are not strong enough and die")
+            break
+            
+        elif fight == "no":
+            print("your thinking a plan right now but the there no time left the rafflesia destroy the golden apple and will everyone die")
+            close()
+            break
+
+        else:   
+            print("you miss spell")
 
 
-
-
+def close():
+    print("you go to fight the rafflesia but the rafflesia start to call the infected to help")
+    time.sleep(0.6)
+    print(" ")
+    print("the rafflesia fully grow and the golden apple is destroy")
+    time.sleep(0.6)
+    print(" ")
+    print("you don't know what to do so you just rush in")
+    time.sleep(0.6)
+    print(" ")
+    while True:
+        rush = input("you rush in to kill but it try to grab you what should you do 1(burn it) 2 move out)(1/2)").lower()
+    
+        if rush == "1":
+            print("you try to burn it but the flamethrower can't burn it fast enough and the rafflesia grab you and you die")
+            break
+            
+        elif rush == "2":
+            print("you try to move out of the way and it work the rafflesia miss you got a chance to stike")
+            
+            
+        else:
+            print("pick between 1 or 2 try again")
+            
+def teammate():
+    print("you got a chance to strike the rafflesia but you are not strong enough to kill it alone")      
+    time.sleep(0.6)
+    print(" ")
+    print("you need to find a teammate to help you fight the rafflesia")
+    time.sleep(0.6)
+    print(" ")   
+    while True:
+        teammate = input("you retreat to find a survivor to help you fight the rafflesia do you want to look for a teammate (yes/no)").lower()
+        
+        if teammate == "yes":
+            print("you look for a trace of survior and you find footprint you follow it and find a cave")
+            cave()
+            break
+            
+        elif teammate == "no":
+            print("you don't look for a teammate and go back to fight the rafflesia but you are not strong enough and die")
+            break
+            
+        else:
+            print("pick between yes or no try again")
+            
+def cave():
+    print("you use the flamethrower to light up a torch located where the footprint")
+    time.sleep(0.6)
+    print(" ")
+    print("you follow the torch light and find a survivor hiding in the cave")
+    time.sleep(0.6)
+    print(" ")
+    print("the survivor try to attack you but try to talk to him and find out he not alone there is a group of survivor hiding in the cave")
+    time.sleep(0.6)
+    print(" ")
+    print("you talk to the survivor and find out they are also trying to find a way to kill the rafflesia and they want to join you to fight the rafflesia")
+    time.sleep(0.6)
+    print(" ")
+    while True:
+        number = input("you do want to join them (yes/no)").lower()
+        
+        if number == "yes":
+            print("you join the survior to fight the rafflesia together")
+            team()
+            break
+        
+        elif number == "no":
+            print("you didn't join the survior and go back alone you got killed by the rafflesia")
+            break
+        
+        else:
+            print("pick between yes or no try again")
+            
+            
+            
+def team():
+    print("you had a team to fight the rafflesia but the rafflesia almost destroy the golden apple you need to fight it now the time rn is 1:00 AM")
+    time.sleep(0.6)
+    print(" ")
+    while True:
+        fight = input("you reach the biohazrd and the rafflesia is ready for you(go in/stay back)").lower()
+        
+        if fight == "go in":
+            print("you go in and fight the rafflesia together you burn it eye you is blind for a second")
+            time.sleep(0.6)
+            print(" ")
+            print("you take the chance to strike the rafflesia and you kill it")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         
 alive = intro()
 
 if alive:
