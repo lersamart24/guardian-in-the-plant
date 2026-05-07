@@ -384,7 +384,7 @@ def last_run():
       print("you rush in and jump on the rafflesia and stab it in the middle but it didn't work and the infected kill you")
       break
       
-      
+     #BUG HERE FIXING 
     elif HIT == "2":
       print("You need to come up with something you see a puddle of water that gave you a idea")
       time.sleep(0.6)
