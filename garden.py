@@ -240,7 +240,7 @@ def first_round():
 
 
 def close():
-    print("you go to fight the rafflesia but the rafflesia start to call the infected to help")
+    print("you go to fight the rafflesia but the rafflesia it start to become stronger")
     time.sleep(0.6)
     print(" ")
     print("the rafflesia fully grow and the golden apple is destroy")
@@ -258,7 +258,8 @@ def close():
             
         elif rush == "2":
             print("you try to move out of the way and it work the rafflesia miss you got a chance to stike")
-            
+            teammate()
+            break
             
         else:
             print("pick between 1 or 2 try again")
@@ -295,7 +296,7 @@ def cave():
     print("the survivor try to attack you but try to talk to him and find out he not alone there is a group of survivor hiding in the cave")
     time.sleep(0.6)
     print(" ")
-    print("you talk to the survivor and find out they are also trying to find a way to kill the rafflesia and they want to join you to fight the rafflesia")
+    print("you talk to the survivor and find out they are also trying to find a way to kill the rafflesia and they want to join you to fight the rafflesia it been 1 and a half day")
     time.sleep(0.6)
     print(" ")
     while True:
@@ -316,7 +317,11 @@ def cave():
             
             
 def team():
-    print("you had a team to fight the rafflesia but the rafflesia almost destroy the golden apple you need to fight it now the time rn is 1:00 AM")
+    print("you had a team to fight the rafflesia but the rafflesia almost destroy the golden apple you need to fight it now the time right now is 1:00 AM")
+    time.sleep(0.6)
+    print(" ")
+    time.sleep(0.6)
+    print("one hr pass the rafflesia has full destroy the golden apple the virus has virus spread all around the world")
     time.sleep(0.6)
     print(" ")
     while True:
@@ -326,19 +331,89 @@ def team():
             print("you go in and fight the rafflesia together you burn it eye you is blind for a second")
             time.sleep(0.6)
             print(" ")
-            print("you take the chance to strike the rafflesia and you kill it")
+            print("you take the chance to strike the rafflesia and you did it you hit it in the head")
+            last_round()
+            break
+            
+        elif fight == "stay back":
+          print("you stay in the back but you trip on a rock a you land on your head and die")
+          break
+        
+        
+        else:
+          print("you miss spell")
     
     
     
+def last_round():
+     print("the rafflesia is not very weak it call all the infected")
+     time.sleep(0.6)
+     print(" ")
+     print("all your teammate your injured so you got to do it my yourself")
+     time.sleep(0.6)
+     print(" ")
+     while True:
+      swam = input("all the infected is in one place what should you do 1 rush in 2 defend your teammate (1/2)")
+      
+      if swam == "1":
+        print("you rush in kill and infected in your way with your weapon")
+        last_run()
+        break
+      
+      
+      elif swam == "2":
+        print("you project your teammate but they one be getting up soon the zombie overwhelmed and die ")
+        break
+      
+      else:
+        print("pick between 1/2")
+        
+      
+      
+def last_run():
+  print("you keep running unit you ran out of fual")
+  time.sleep(0.6)
+  print(" ")
+  print("you reach the rafflesia but you ran out of fual")
+  time.sleep(0.6)
+  print(" ")
+  while True:
+    HIT = input("you infront of the rafflesia you got 2 choice ONE (you use the stick part of the flamethrow as a sword)TWO(use other plan) (1/2)")
+    
+    if HIT == "1":
+      print("you rush in and jump on the rafflesia and stab it in the middle but it didn't work and the infected kill you")
+      break
+      
+      
+    elif HIT == "2":
+      print("You need to come up with something you see a puddle of water that gave you a idea")
+      time.sleep(0.6)
+      print(" ")
+      print("you use the jar that store your pine tree sap")
+      nothing()
+      break
+      
+      
+    else:
+      print("Pick 1 or 2")
     
     
-    
-    
-    
-    
-    
-    
-    
+  def nothing():
+    if "Ruellia tuberosa" in backpack:
+      print("you store the water in a jar and told the Ruellia tuberosa in")
+      time.sleep(0.6)
+      print(" ")
+      print("You jump on to the rafflesia and stick the jar inside the rafflesia the rafflesia explode and everything over")
+    else:
+      print("you didn't have the Ruellia tuberosa and you can't do anything with a jar of water so sadly the rafflesia kill you")
+   
+   
+   
+   
+   
+   
+   
+   
          
 alive = intro()
 
