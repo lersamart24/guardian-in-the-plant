@@ -1,5 +1,5 @@
 import time
-
+import sys
 backpack = []
 
 
@@ -30,19 +30,22 @@ def intro():
 
 
 def shovel():
-    choice = input("you found a Ruellia tuberosa (pick/leave): ").lower()
+    while True:
+        choice = input("you found a Ruellia tuberosa (pick/leave): ").lower()
 
-    if choice == "pick":
-        print("you pick it and store it in your backpack")
-        backpack.append("Ruellia tuberosa")
-            
+        if choice == "pick":
+            print("you pick it and store it in your backpack")
+            backpack.append("Ruellia tuberosa")
+            biohazard_scene()
+            break
 
-    elif choice == "leave":
-        print("you miss on a very cool thing")
-            
+        elif choice == "leave":
+            print("you miss on a very cool thing")
+            biohazard_scene()
+            break
 
-    else:
-        print("you miss spell")
+        else:
+            print("you miss spell")
 
 
 def biohazard_scene():
@@ -53,12 +56,12 @@ def biohazard_scene():
         if plant == "yes":
             print("you go in and found an apple tree with a rafflesia around it you walk around a bit")
             start()
-            break    
+            break
+           
         #there a bug on this one
         elif plant == "no":
-            print("you step on a sundew plant it eat you try again")
-            break
-
+            print("you step on a sundew plant it eat you")
+            sys.exit()
         
         else:
             print("i didn't understand")
@@ -75,7 +78,13 @@ def start():
     time.sleep(0.6)
 
     print("the only rafflesia weakness is fire")
+    time.sleep(0.6)
 
+    print("you need to find the golden apple")
+    time.sleep(0.6)
+
+    print("you need to find a way to kill the rafflesia")
+    
 
 def fight_scene():
     while True:
@@ -83,7 +92,7 @@ def fight_scene():
         
             if pepsii == "1":
                 print("you try to fight it but you are too weak and die")
-                break
+                sys.exit()
                     
         
             elif pepsii == "2":
@@ -111,7 +120,7 @@ def weapon():
     
         if coming == "fight":
             print("You try to fight it but you got no weapon and die")
-            break
+            sys.exit()
     
         elif coming == "hide":
             print("You try to hide behind a tree and it work the infected leave and you come out")
@@ -120,7 +129,7 @@ def weapon():
     
         elif coming == "run":
             print("you maybe can outrun a 100 of zombie but not a 1000 you die")
-            break
+            sys.exit()
             
         else:
             print("pick between fight/run/hide")
@@ -160,7 +169,7 @@ def ingredirnt():
             
         elif survivors == "no":
             print("you didn't investigate the camp so you go out in forest and a infected kill you")
-            break
+            sys.exit()
     
         else:
             print("pick between (yes/no)")
@@ -207,12 +216,12 @@ def weapon_test():
                 break
             else:
                 print("you don't have the flamethrower so you can't test it and the infected kill you")
-                break
+                sys.exit()
             
         elif test == "no":
-            print("you don't test it and go to fight the rafflesia so you don't now how to use it")
-            break
-     
+            print("you don't test it and go to fight the rafflesia so you don't now how to use it and die")
+            sys.exit()
+
         else:
             print("you miss spell")
 
@@ -228,7 +237,8 @@ def first_round():
     
         if fight == "yes":
             print("you try to fight it but you are not strong enough and die")
-            break
+            sys.exit()
+
             
         elif fight == "no":
             print("your thinking a plan right now but the there no time left the rafflesia destroy the golden apple and will everyone die")
@@ -254,7 +264,7 @@ def close():
     
         if rush == "1":
             print("you try to burn it but the flamethrower can't burn it fast enough and the rafflesia grab you and you die")
-            break
+            sys.exit()
             
         elif rush == "2":
             print("you try to move out of the way and it work the rafflesia miss you got a chance to stike")
@@ -281,7 +291,7 @@ def teammate():
             
         elif teammate == "no":
             print("you don't look for a teammate and go back to fight the rafflesia but you are not strong enough and die")
-            break
+            sys.exit()
             
         else:
             print("pick between yes or no try again")
@@ -309,7 +319,7 @@ def cave():
         
         elif number == "no":
             print("you didn't join the survior and go back alone you got killed by the rafflesia")
-            break
+            sys.exit()
         
         else:
             print("pick between yes or no try again")
@@ -337,7 +347,7 @@ def team():
             
         elif fight == "stay back":
           print("you stay in the back but you trip on a rock a you land on your head and die")
-          break
+          sys.exit()
         
         
         else:
@@ -363,7 +373,7 @@ def last_round():
       
       elif swam == "2":
         print("you project your teammate but they one be getting up soon the zombie overwhelmed and die ")
-        break
+        sys.exit()
       
       else:
         print("pick between 1/2")
@@ -382,7 +392,7 @@ def last_run():
     
     if HIT == "1":
       print("you rush in and jump on the rafflesia and stab it in the middle but it didn't work and the infected kill you")
-      break
+      sys.exit()
       
      #BUG HERE FIXING 
     elif HIT == "2":
@@ -398,20 +408,26 @@ def last_run():
       print("Pick 1 or 2")
     
     
-  def nothing():
-    if "Ruellia tuberosa" in backpack:
-      print("you store the water in a jar and told the Ruellia tuberosa in")
-      time.sleep(0.6)
-      print(" ")
-      print("You jump on to the rafflesia and stick the jar inside the rafflesia the rafflesia explode and everything over")
-    else:
-      print("you didn't have the Ruellia tuberosa and you can't do anything with a jar of water so sadly the rafflesia kill you")
+def nothing():
+    while True:
+        
+        if "Ruellia tuberosa" in backpack:
+            print("you store the water in a jar and told the Ruellia tuberosa in")
+            time.sleep(0.6)
+            print(" ")
+            print("You jump on to the rafflesia and stick the jar inside the rafflesia the rafflesia explode and you win but the golden apple is destroy")
+            win()
+            break
+    
+        elif "Ruellia tuberosa" not in backpack:
+            print("you didn't have the Ruellia tuberosa and you can't do anything with a jar of water so sadly the rafflesia kill you")  
+            sys.exit()
    
+def win():
+     print("luckily there one golden apple seed one the ground you plant it and it grow into a golden apple tree and save the world")  
    
-   
-   
-   
-   
+
+  
    
    
          
