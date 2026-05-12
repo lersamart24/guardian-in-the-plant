@@ -6,20 +6,26 @@ backpack = []
 def intro():
     print("right now the world is in danger because there was a outbreak in the biohazard.")
     time.sleep(0.6)
+    print(" ")
     print("the outbreak has mutate the plant and human the plant now is 10x stronger")
+    time.sleep(0.6)
+    print(" ")
     print("humans are infected by the zoonotic bridge rafflesia (ZBR)")
+    time.sleep(0.6)
+    print(" ")
     alive = True
 
     while True:
         first_step = input("everything start at 12:00 PM what will you do (save the world / do nothing): ").lower()
-
+        time.sleep(0.6)
+        print(" ")
         if first_step == "do nothing":
             print("you got the bad ending every one die")
             alive = False
             break
 
         elif first_step == "save the world":
-            print("you start your journey...")
+            print("you start your journey")
             alive = True
             break
 
@@ -31,82 +37,111 @@ def intro():
 
 def shovel():
     while True:
+        time.sleep(0.6)
+        print(" ")
         choice = input("you found a Ruellia tuberosa (pick/leave): ").lower()
-
+        time.sleep(0.6)
+        print(" ")
         if choice == "pick":
             print("you pick it and store it in your backpack")
+            time.sleep(0.6)
+            print(" ")
             backpack.append("Ruellia tuberosa")
             biohazard_scene()
             break
 
         elif choice == "leave":
             print("you miss on a very cool thing")
+            time.sleep(0.6)
+            print(" ")
             biohazard_scene()
             break
 
         else:
+            time.sleep(0.6)
+            print(" ")
             print("you miss spell")
 
 
 def biohazard_scene():
     print("you pass by a biohazard")
+    time.sleep(0.6)
+    print(" ")
     while True:
         plant = input("do you want to go in (yes/no): ").lower()
 
         if plant == "yes":
+            time.sleep(0.6)
+            print(" ")
             print("you go in and found an apple tree with a rafflesia around it you walk around a bit")
             start()
             break
            
         #there a bug on this one
         elif plant == "no":
+            time.sleep(0.6)
+            print(" ")
             print("you step on a sundew plant it eat you")
             sys.exit()
         
         else:
+            time.sleep(0.6)
+            print(" ")
             print("i didn't understand")
 
 
 def start():
+    time.sleep(0.6)
+    print(" ")
     print("and find a sheet of paper...")
     time.sleep(0.6)
-
+    print(" ")
     print("it say the only cure to ZBR is the golden apple")
     time.sleep(0.6)
-
+    print(" ")
     print("the rafflesia will destroy it in 2 day")
     time.sleep(0.6)
-
+    print(" ")
     print("the only rafflesia weakness is fire")
     time.sleep(0.6)
-
-    print("you need to find the golden apple")
+    print(" ")
+    print("the note end there")
     time.sleep(0.6)
-
-    print("you need to find a way to kill the rafflesia")
-    
+    print(" ")
+    print("you need to find a way to get that golden apple")
+    time.sleep(0.6)
+    print(" ")
+    fight_scene()
 
 def fight_scene():
     while True:
             pepsii = input("what should you do 1(fight it) 2(run): ").lower()
         
             if pepsii == "1":
+                time.sleep(0.6)
+                print(" ")
                 print("you try to fight it but you are too weak and die")
                 sys.exit()
                     
         
             elif pepsii == "2":
+                time.sleep(0.6)
+                print(" ")
                 print("you run away but find no survivors")
+                time.sleep(0.6)
+                print(" ")
                 weapon()
                 break    
                 
             else:
+                time.sleep(0.6)
+                print(" ")
                 print("Pick 1 or 2 try again")
 
 
 
 def weapon():
-    print("you did find any surviors so you decide to craft some weapon")
+    print("you didn't find any surviors so you decide to craft some weapon")
     time.sleep(0.6)   
     print( )
     print("you go out to find some ingredient")
@@ -119,19 +154,27 @@ def weapon():
         coming = input("Before you can do anything a group of infected come near you(fight/run/hide): ").lower()
     
         if coming == "fight":
+            time.sleep(0.6)
+            print(" ")
             print("You try to fight it but you got no weapon and die")
             sys.exit()
     
         elif coming == "hide":
+            time.sleep(0.6)
+            print(" ")
             print("You try to hide behind a tree and it work the infected leave and you come out")
             ingredirnt()
             break
     
         elif coming == "run":
+            time.sleep(0.6)
+            print(" ")
             print("you maybe can outrun a 100 of zombie but not a 1000 you die")
             sys.exit()
             
         else:
+            time.sleep(0.6)
+            print(" ")
             print("pick between fight/run/hide")
             
 
@@ -139,12 +182,14 @@ def weapon():
 
 
 def ingredirnt():
+    time.sleep(0.6)
+    print(" ")
     print("After you run away from the infected you found a pine tree sap")
-    time.sleep(0.6)   
-    print(" ")    
+    time.sleep(0.6)
+    print(" ")  
     print("you pick the sap for the ingredirnt and store it in a jar")
-    time.sleep(0.6)   
-    print(" ")    
+    time.sleep(0.6)
+    print(" ")   
     backpack.append("sap in a jar")
     print(backpack)
     time.sleep(0.6)   
@@ -159,29 +204,45 @@ def ingredirnt():
     time.sleep(0.6)   
     print(" ")
     print("You didn't find anything but a abandoned camp")
+    time.sleep(0.6)
+    print(" ")
     while True:
         survivors = input("should you investigate the camp(yes/no)").lower()
     
         if survivors == "yes":
+            time.sleep(0.6)
+            print(" ")
             print("You investigate the camp and found a backpack inside that it a lighter")
             group()
             break
             
         elif survivors == "no":
+            time.sleep(0.6)
+            print(" ")
             print("you didn't investigate the camp so you go out in forest and a infected kill you")
             sys.exit()
     
         else:
+            time.sleep(0.6)
+            print(" ")
             print("pick between (yes/no)")
     
 def group():
-    print("All you need left is a stick so you pick some random stick on the ground")
+    time.sleep(0.6)
+    print(" ")
+    print("all you need left is a stick so you pick some random stick on the ground")
     backpack.append("stick")
+    time.sleep(0.6)
+    print(" ")
     print(backpack)
+    time.sleep(0.6)
+    print(" ")
     while True:
         craft = input("You got a stick that is your last ingredirnt do you want to craft it (yes/no)")
     
         if craft == "yes":
+            time.sleep(0.6)
+            print(" ")
             #part for checking if the backpack have the ingredirnt 
             print("you caft the flamethrower")
             backpack.append("flamethrower")
@@ -190,16 +251,22 @@ def group():
 
     
         elif craft == "no":
+            time.sleep(0.6)
+            print(" ")
             print("what are you saving that in ingredirnt for 🧐")
             weapon_test()
             break
     
         else:
+            time.sleep(0.6)
+            print(" ")
             print("you miss spell")
 
     
 
 def weapon_test():
+    time.sleep(0.6)
+    print(" ")
     print("you got the flamethrower but you want to test if it work")
     time.sleep(0.6)
     print(" ")
@@ -211,14 +278,20 @@ def weapon_test():
     
         if test == "yes":
             if "flamethrower" in backpack:
+                time.sleep(0.6)
+                print(" ")
                 print("you test it and it work you burn the infected and you are ready to fight the rafflesia")
                 first_round()
                 break
             else:
+                time.sleep(0.6)
+                print(" ")
                 print("you don't have the flamethrower so you can't test it and the infected kill you")
                 sys.exit()
             
         elif test == "no":
+            time.sleep(0.6)
+            print(" ")
             print("you don't test it and go to fight the rafflesia so you don't now how to use it and die")
             sys.exit()
 
@@ -226,6 +299,8 @@ def weapon_test():
             print("you miss spell")
 
 def first_round():
+    time.sleep(0.6)
+    print(" ")
     print("you go to the biohazard again to fight the rafflesia")
     time.sleep(0.6)
     print(" ")
@@ -236,18 +311,24 @@ def first_round():
         fight = input("do you want to fight it now (yes/no)").lower()
     
         if fight == "yes":
+            time.sleep(0.6)
+            print(" ")
             print("you try to fight it but you are not strong enough and die")
             sys.exit()
 
             
         elif fight == "no":
+            time.sleep(0.6)
+            print(" ")
             print("your thinking a plan right now but the there no time left the rafflesia destroy the golden apple and will everyone die")
             close()
             break
 
-        else:   
+        else:
+            time.sleep(0.6)
+            print(" ")   
             print("you miss spell")
-
+#FIXING HERE OTHER IN THE BACK IF FIX
 
 def close():
     print("you go to fight the rafflesia but the rafflesia it start to become stronger")
